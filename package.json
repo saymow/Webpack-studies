@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "set NODE_ENV=test && webpack --config webpack.config.js --display-error-details",
+    "webpack": "webpack --config webpack.config.js --display-error-details%",
+    "webpack:production": "webpack --config webpack.config.js --display-error-details --env=production",
     "webpack:test": "webpack --config test/webpack.test.config.js --display-error-details",
     "jest": "jest test/bundle.test.js",
     "test": "npm run webpack:test && npm run jest"
@@ -12,7 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "config": {
+    "webpack_args": " --config webpack.config.js --display-error-details"
+  },
   "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
     "jest": "^26.4.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
