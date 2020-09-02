@@ -1,3 +1,6 @@
+import "tachyons";
+import "../css/styles.css";
+
 import mdPreviewer from "./mdPreviewer";
 
 window.onload = () => {

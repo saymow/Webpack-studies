@@ -90,7 +90,14 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mdPreviewer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var tachyons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var tachyons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tachyons__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mdPreviewer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+
+
+
 
 
 window.onload = () => {
@@ -98,18 +105,30 @@ window.onload = () => {
     .getElementById("editor")
     .addEventListener(
       "submit",
-      _mdPreviewer__WEBPACK_IMPORTED_MODULE_0__["default"].attachPreviewer(document, "source", "preview")
+      _mdPreviewer__WEBPACK_IMPORTED_MODULE_2__["default"].attachPreviewer(document, "source", "preview")
     );
 };
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var markdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var markdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 /* harmony import */ var markdown__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(markdown__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -129,16 +148,16 @@ var attachPreviewer = ($document, sourceId, previewerId) => {
 
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // super simple module for the most common nodejs use case.
-exports.markdown = __webpack_require__(3);
+exports.markdown = __webpack_require__(5);
 exports.parse = exports.markdown.toHTML;
 
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Released under MIT license
@@ -270,7 +289,7 @@ function mk_block_toSource() {
 
 // node
 function mk_block_inspect() {
-  var util = __webpack_require__(4);
+  var util = __webpack_require__(6);
   return "Markdown.mk_block( " +
           util.inspect(this.toString()) +
           ", " +
@@ -1866,7 +1885,7 @@ function merge_text_nodes( jsonml ) {
 
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -2404,7 +2423,7 @@ function isPrimitive(arg) {
 }
 exports.isPrimitive = isPrimitive;
 
-exports.isBuffer = __webpack_require__(6);
+exports.isBuffer = __webpack_require__(8);
 
 function objectToString(o) {
   return Object.prototype.toString.call(o);
@@ -2448,7 +2467,7 @@ exports.log = function() {
  *     prototype.
  * @param {function} superCtor Constructor function to inherit prototype from.
  */
-exports.inherits = __webpack_require__(7);
+exports.inherits = __webpack_require__(9);
 
 exports._extend = function(origin, add) {
   // Don't do anything if add isn't an object
@@ -2573,10 +2592,10 @@ function callbackify(original) {
 }
 exports.callbackify = callbackify;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(7)))
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -2766,7 +2785,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = function isBuffer(arg) {
@@ -2777,7 +2796,7 @@ module.exports = function isBuffer(arg) {
 }
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 if (typeof Object.create === 'function') {
