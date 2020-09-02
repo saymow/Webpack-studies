@@ -1,7 +1,10 @@
 import mdPreviewer from "../src/mdPreviewer";
 
-describe("markdownPreviewer", function () {
-  it("should exist", function () {
+describe("markdownPreviewer", () => {
+  it("should exist", () => {
     expect(mdPreviewer).toBeDefined();
+  });
+  it("shoud be equal", () => {
+    expect(5).toBe(5);
   });
 });
