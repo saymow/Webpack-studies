@@ -4,7 +4,18 @@ describe("markdownPreviewer", () => {
   it("should exist", () => {
     expect(mdPreviewer).toBeDefined();
   });
-  it("shoud be equal", () => {
-    expect(5).toBe(5);
+  it("should allow deep references", () => {
+    const o = {
+      foo: {
+        bar: "blah",
+      },
+    };
+
+    const y = {
+      ...o,
+    }
+
+    expect(o?.foo?.bar).toBe("blah");
+    expect(y).toEqual(o)
   });
 });
